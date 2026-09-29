@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exam Dates Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <span class="logo">ExamDates</span>
+  <div class="actions">
+    <button id="notifyBtn" class="btn ghost">Reminders</button>
+    <span id="hello"></span>
+    <button id="authBtn" class="btn">Log in</button>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <h1 id="heroTitle">Never miss an exam date</h1>
+    <p id="heroText">Log in, follow your exams and get reminders before every important date.</p>
+    <div id="next"></div>
+  </section>
+
+  <h2>My upcoming dates <small id="myCount"></small></h2>
+  <div id="mine"></div>
+
+  <h2>All exams</h2>
+  <div class="bar">
+    <div class="chips" id="chips"></div>
+    <input class="search" id="q" type="search" placeholder="Search exams" aria-label="Search exams">
+  </div>
+  <div id="sections"></div>
+</main>
+
+<footer>Sample dates only. Confirm every date on the official notification.</footer>
+
+<dialog id="dlg">
+  <div class="tabs" role="tablist">
+    <button role="tab" data-mode="login" aria-selected="true">Log in</button>
+    <button role="tab" data-mode="register" aria-selected="false">Create account</button>
+  </div>
+  <form id="form">
+    <label id="nameRow" hidden>Name<input id="name" autocomplete="name"></label>
+    <label>Email<input id="email" type="email" required autocomplete="email"></label>
+    <label>Password<input id="pass" type="password" minlength="6" required autocomplete="current-password"></label>
+    <div class="msg" id="msg" role="alert"></div>
+    <button class="btn" id="submit">Log in</button>
+    <button type="button" class="close" id="closeDlg">Continue as guest</button>
+  </form>
+</dialog>
+<div id="toasts" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
